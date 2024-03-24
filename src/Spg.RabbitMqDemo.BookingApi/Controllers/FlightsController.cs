@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Spg.RabbitMqDemo.Application.BookingApi;
+using Spg.RabbitMqDemo.DomainModel.Dtos.BookingApi;
 using Spg.RabbitMqDemo.DomainModel.Interfaces;
 using Spg.RabbitMqDemo.Repository;
 
@@ -20,7 +22,20 @@ namespace Spg.RabbitMqDemo.BookingApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetAll()
         {
-            return Ok(_flightService.GetAll());
+            return Ok(_flightService
+                .GetAll()
+                .Select(f => 
+                    new AvailableFlightDto(
+                        f.Identifier, 
+                        f.FlightNumber, 
+                        f.FromDestination, 
+                        f.ToDestination,
+                        f.Departure, 
+                        f.BasePrice, 
+                        f.PlaneType
+                    )
+                )
+            );
         }
     }
 }

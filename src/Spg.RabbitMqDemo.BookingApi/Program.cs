@@ -8,6 +8,9 @@ using Spg.RabbitMqDemo.Infrastructure.BookingApi;
 using Spg.RabbitMqDemo.Repository.BookingApi;
 using System.Reflection;
 
+// Inspired by:
+// https://medium.com/multinetinventiv/publish-and-consume-messages-with-masstransit-and-rabbitmq-on-net-6-6118377bfedb
+
 Console.WriteLine("B O O K I N G S - D A T A B A S E");
 Console.WriteLine("=================================");
 

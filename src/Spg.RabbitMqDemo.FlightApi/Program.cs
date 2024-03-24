@@ -7,6 +7,9 @@ using Spg.RabbitMqDemo.Infrastructure.FlightApi;
 using Spg.RabbitMqDemo.Repository;
 using Spg.RabbitMqDemo.Repository.FlightApi;
 
+// Inspired by:
+// https://medium.com/multinetinventiv/publish-and-consume-messages-with-masstransit-and-rabbitmq-on-net-6-6118377bfedb
+
 Console.WriteLine("F L I G H T S - D A T A B A S E");
 Console.WriteLine("===============================");
 
