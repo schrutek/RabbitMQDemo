@@ -20,9 +20,6 @@ namespace Spg.RabbitMqDemo.BookingApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult GetAll()
         {
-            FlightApiClient client = new FlightApiClient();
-            client.
-
             return Ok(_flightService.GetAll());
         }
     }
