@@ -20,7 +20,7 @@ namespace Spg.RabbitMqDemo.Repository
             {
                 _publishEndPoint.Publish(entity.ToDto());
             }
-            catch (DbUpdateException ex)
+            catch (Exception ex)
             {
                 throw new InvalidOperationException("Error...", ex);
             }
