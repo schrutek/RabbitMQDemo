@@ -1,10 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <OpenApiReference Include="..\..\FlightApi.json" CodeGenerator="NSwagCSharp" Namespace="Spg.RabbitMqDemo.Repository.Client" ClassName="FlightApiClient" Link="OpenAPIs\FlightApi.json" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Spg.RabbitMqDemo.DomainModel\Spg.RabbitMqDemo.DomainModel.csproj" />
     <ProjectReference Include="..\Spg.RabbitMqDemo.Infrastructure\Spg.RabbitMqDemo.Infrastructure.csproj" />
   </ItemGroup>

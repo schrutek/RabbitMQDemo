@@ -63,7 +63,7 @@ namespace Spg.RabbitMqDemo.FlightApi.Controllers
             }
         }
 
-        [HttpGet("{id:string}")]
+        [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public IActionResult Get([FromRoute] string id)
         {
